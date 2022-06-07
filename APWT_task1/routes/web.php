@@ -14,4 +14,4 @@ use App\Http\Controllers\ProductsController;
 */
 
 
-Route::get('/',[ProductsController::class, 'Service'])->name('service'); 
+Route::get('/',[ProductsController::class, 'Service'])->name('service');
