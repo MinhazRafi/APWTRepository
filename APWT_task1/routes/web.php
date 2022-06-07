@@ -15,3 +15,7 @@ use App\Http\Controllers\ProductsController;
 
 
 Route::get('/',[ProductsController::class, 'Service'])->name('service');
+Route::get('/',[indexController::class, 'indexPage'])->name('index');
+Route::get('/',[ourTeamsController::class, 'teams'])->name('teams');
+Route::get('/',[contactController::class, 'contact'])->name('contact');
+Route::get('/',[aboutController::class, 'about'])->name('about');

@@ -1,3 +1,5 @@
+@extends('layout.index')
+@section('content')
 <html>
     <head></head>
     <body>
@@ -9,3 +11,4 @@
         </div>
     </body>
 </html>
+@endsection
