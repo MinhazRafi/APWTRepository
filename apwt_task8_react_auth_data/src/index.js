@@ -3,23 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Nav from './Components/Nav';
-import Footer from './Components/Footer';
-import ShowInfo from './Components/ShowInfo';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Foot from './Components/Foot';
+import Home from './Components/Home';
+import Navbar from './Components/Navbar';
+import Login from './Components/Login';
+import SignOut from './Components/SignOut';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Nav/>
+      <Navbar/>
       <Routes>
-        <Route>
-        <Route exact path='/' element={<App/>} />
-        <Route exact path='/Api' element={<ShowInfo/>} />
-        </Route>
+      <Route exact path='/' element={<Home/>} />
+      <Route exact path='/login' element={<Login/>} />
+      <Route exact path='/signout' element={<SignOut/>} />
       </Routes>
-      <Footer />
+      <SignOut/>
     </Router>
   </React.StrictMode>
 );
